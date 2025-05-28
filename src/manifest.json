@@ -1,6 +1,6 @@
 {
-  "name": "Stencil Starter",
-  "short_name": "Stencil",
+  "name": "Stencil Storefront",
+  "short_name": "Stencil-storefront",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
