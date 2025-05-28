@@ -10,20 +10,27 @@
   <meta http-equiv="x-ua-compatible" content="IE=Edge">
 
   <script src="http://localhost:3333/build/app.esm.js" type="module"></script>
-  <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
-  <shopify-store store-domain="mock.shop" country="US" language="en"></shopify-store>
 </head>
 <body>
   <h1>Stencil components and storefron components</h1>
-
+  
   <h2>Stencil component + storefront component</h2>
   <custom-component></custom-component>
-
+  
+  <h2>Stencil component + storefront component (script cdn and shop inside component)</h2>
+  <custom-component-v2></custom-component-v2>
+  
   <h2>Storefront component</h2>
-  <shopify-context type="product" handle="hoodie">
-    <template>
-      <shopify-media width="280" height="280" query="product.selectedOrFirstAvailableVariant.image"></shopify-media>
-    </template>
-  </shopify-context>
+
+  <div class="test-wrap">
+    <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
+    <shopify-store store-domain="mock.shop" country="US" language="en"></shopify-store>
+    <shopify-context type="product" handle="hoodie">
+      <template>
+        <shopify-media width="280" height="280" query="product.selectedOrFirstAvailableVariant.image"></shopify-media>
+      </template>
+    </shopify-context>
+  </div>
+
 </body>
 </html>
